@@ -8,10 +8,10 @@ import Album from "./components/Album";
 
 function App() {
   return (
-  <div style={{textAlign:"center"}}>
-  <PrimarySearchAppBar />
-  <Album />
-  </div>
+    <>
+      <PrimarySearchAppBar />
+      <Album />
+    </>
   );
 }
 
