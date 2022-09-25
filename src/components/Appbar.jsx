@@ -173,7 +173,7 @@ export default function PrimarySearchAppBar() {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            SEPTRAN++
+            Photo+
           </Typography>
           <Search>
             <SearchIconWrapper>

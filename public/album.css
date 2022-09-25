@@ -1,0 +1,44 @@
+
+._cardcontainer{
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+._card{
+    width: 250px;
+    height: 400px;
+    margin: 2px 4px 4px 4px;
+    flex:auto;
+}
+._cardmedia{
+    width: auto;
+    height: 250px;
+}
+._cardcontent{
+    width: auto;
+}
+._cardbody{
+    width: auto;
+}
+
+@media (max-width: 375px) {
+  ._card{
+    width: auto;
+    height: 500px;
+    padding: 2px;
+  }
+  ._cardmedia{
+    height: 300px;
+  }
+}
+@media (max-width: 912px) {
+  ._card{
+    width: 100%;
+    height: 500px;
+    padding: 2px;
+  }
+  ._cardmedia{
+    height: 300px;
+  }
+}

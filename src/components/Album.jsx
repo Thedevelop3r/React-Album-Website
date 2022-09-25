@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import {
   Typography,
   CardActions,
@@ -20,68 +21,78 @@ import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import { PhotoCamera } from "@mui/icons-material";
 import { borderRadius } from "@mui/system";
 
+// importing styles
+
+
+
+
 export default function Album() {
   const cardSize = [
-    1, 2, 3, 3, 4, 2, 3, 4, 2, 3, 4,
+    1,
+    2,
+    3,
+    3,
+    4,
+    2,
+    3,
+    3,
+    4,
+    2,
+    3,
+    3,
+    4,
+    2,
+    3,
+    3,
+    4,
+    2,
+    3,
+    3,
+    4,
+    ,
+    2,
+    3,
+    3,
+    4,
+    ,
+    2,
+    3,
+    3,
+    4,
+    ,
+    2,
+    3,
+    3,
+    4,
   ];
 
-  const AlbumCard =(id)=>{  return(
-    <Card key={id}
-    // {
-    //     // width: "100%",
-    //     // marginBottom: "2rem",
-    //     // padding: "0",
-    //   }
-      sx={4}
-      style={{
-        display: "inline-block",
-        width:"100%"
-      }}
-    >
-      <CardMedia
-        style={{ width: "100%", height: "350px" }}
-        title="cardimg"
-        image="https://source.unsplash.com/random"
-      />
-      <CardContent>
-        <Typography
-          style={{
-            marginBottom: "8px",
-            paddingLeft:"4px",
-            borderLeft: "2px solid"
-            
-          }}
-          variant="h4"
-          color="primary"
-        >
-          Perfection
-        </Typography>
-        <Typography
-          variant="body2"
-          style={{
-            color: "grey",
-            paddingLeft: "4px",
-            borderLeft: "2px solid",
-            // borderRadius:"4px"
-            
-          }}
-        >
-
-          Balanced as it should be. Uses a random picture api that sends a new
-          random picture each time it is called.
-        </Typography>
-      </CardContent>
-    </Card>
-  );
+  const AlbumCard =(id)=>{   
+    return (
+      <Card className="_card" key={id}>
+        <CardMedia
+          className="_cardmedia"
+          title="random-img"
+          image="https://source.unsplash.com/random"
+        />
+        <CardContent className="_cardcontent">
+          <Typography variant="h4" color="primary" className="_cardheading">
+            Perfection
+          </Typography>
+          <Typography variant="body2" className="_cardbody">
+            Balanced as it should be. Uses a random picture api that sends a new
+            random picture each time it is called.
+          </Typography>
+        </CardContent>
+      </Card>
+    );
         }
 
   return (
-    <Grid container spacing={2} columnSpacing={{xs:2, sm:2, md:3, lg:4}}>
-      {cardSize.map((value, index) => (
-        <Grid  key={index} item xs={12} sm={8} md={8} lg={8} xl={4}>
-          <AlbumCard id={index} />
-        </Grid>
-      ))}
-    </Grid>
+   <div className="_cardcontainer" >
+    {cardSize.map((value, index)=>{
+
+     return <AlbumCard key={index} id={index}/>
+    }) }
+   </div>
   );
 }
